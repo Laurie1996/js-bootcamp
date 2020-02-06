@@ -1,6 +1,10 @@
 
-* Functies
+**Functies**
 
+Functie aanroepen altijd met de haakjes ()
+
+#bijvoorbeeld
+helloObject.greeting ()
 
 1. Je kan ze hergebruiken
 2. dynamisch
@@ -18,18 +22,18 @@ sum (1,2)
 ***
 
 
-Het woord function is een Keyword
+**Het woord function is een Keyword
 (a,b) parameters eigenlijk ook een Variable
 
-*NaN (Not a number)**
+NaN (Not a number)**
 
 #Verschil Null en Undefined
 Null is een variable met een lege waarde en Undefined is de absentie van een waarde
 
 
-* Conditionals
+**Conditionals**
 
-If / Else  
+*If / Else  
 
 =
 == Gelijk aan
@@ -38,9 +42,9 @@ If / Else
 > Kleiner dan
 
 
-* Loops
+ #Loops
 
- *for ( var index=0; index <10;  index++)*** ]
+ for ( var index=0; index <10;  index++) ]
 
  Console.log geeft :
 
@@ -54,15 +58,20 @@ If / Else
 7
 8
 9
+**
 
 ## Index <10 ; = Loop moet starten als index kleiner is dan 10 (nu gelijk aan 0) en doet
  dan +1 (Hij stopt bij 9 door de index<10;)
  index++ = Index +1
 
-* Object en Array
 
 
 #Object
+
+* mutable data type
+
+object combineren met const
+wijzig de waarde van het object kan, maar niet het object zelf.
 
 Object bestaat uit *[key]:Value** Pairs
 Key is de manier waarop je het opvraagt je Variable
@@ -83,6 +92,20 @@ student.name
 student.grade
 10
 **
+
+
+var object = {
+  key1: 'this is text'
+  key2: 12
+  key 3: [{
+    key= "some text here"}]
+}
+
+
+#boolean
+
+var boolean = true;
+
 
 
 #Array
@@ -118,8 +141,10 @@ Reduce  ----- > returned wat je wilt  (bijvoorbeeld snelste tijd etc.)
 
 
 
-var = cyclists 
-*cyclists.reduce(function(fastestTime , currentTime){
+*var = cyclists [
+
+]
+cyclists.reduce(function(fastestTime , currentTime){
   if (fastestTime > currentTime.time) {
     return currentTime.time
   } else {
@@ -129,3 +154,62 @@ var = cyclists
 
 
 Return (geeft de mogelijkheid om iets bij een functie te returnen)
+
+#methods
+
+functie die is gedeclareerd in een object
+
+
+**Voorbeeld**
+
+*console(object).(punt =1 trap lager) log(name.length)**
+
+
+
+**Scopes**
+
+
+#Global Scope ==== hoogste niveau, niet genest, niet in een functie (ik kan er altijd bij)
+    const name= 'Danny'; //global
+
+#Local Scope // function Scope ==== function binnen de gatekeepers []
+function greeting () {
+  const name = 'Danny'; // Local
+}
+
+#FunctionScope {
+  Console.log moet in de functie staan anders undefined.
+  je moet de functie callen met de haakjes()
+}
+
+
+#Block scope eigenlijk hetzelfde als een function scope maar minder streng
+we geven alleen var toestemming om deze buiten de gatekeepers te gebruiken
+
+- herkennen aan de if statement vergelijkbaar aan de funtion scope
+
+  if (true) {
+    let y =5;
+  }
+
+console.log (Y)
+
+   Undefined want console niet in de if statement
+
+
+**Hoisting**
+
+Hoisting suggests that variable and function declarations are physically moved to the top
+of your code
+
+num=6;
+console.log(num);
+var num;
+
+myJob= 'Developer'
+console.log('my job is' + myJob);
+var myJob;
+
+var myJob;
+myJob = 'developer'
+console.log('my job is' + myJob);

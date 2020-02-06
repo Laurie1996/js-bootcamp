@@ -26,7 +26,6 @@ Grade = Variable
 "114"]
 
 
-
 ## Explicit Cohersion
 
 [ 1+ Number ="14"
@@ -39,4 +38,4 @@ Grade = Variable
 const is kan je niet
 
 
-var/ let blok zijn blok scopes 
+var/ let blok zijn blok scopes
