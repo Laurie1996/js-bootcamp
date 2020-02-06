@@ -202,14 +202,16 @@ console.log (Y)
 Hoisting suggests that variable and function declarations are physically moved to the top
 of your code
 
+#Hoisting
 num=6;
 console.log(num);
 var num;
 
+#Hoisting is gewoon iets unieks aan java maar kut niet gebruiken
 myJob= 'Developer'
 console.log('my job is' + myJob);
 var myJob;
 
-var myJob;
-myJob = 'developer'
+#De gewoonlijke manier is netter
+var myJob= 'developer'
 console.log('my job is' + myJob);
